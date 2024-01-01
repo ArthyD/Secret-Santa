@@ -8,7 +8,7 @@ Mon application est donc indestructible !
 
 Par contre je crois que j'ai oublié de désactiver quelque chose ... ça ne doit pas être important ...
 
-Quoiqu'il en soit bon courage pour casser mon appli.
+Quoiqu'il en soit bon courage pour casser mon appli. Le code t'es ouvert n'hésites pas à te balader dedans (sauf dans le dossier static parce que sinon c'est pas drôle, tu peux l'atteindre différement depuis l'appli).
 
 ## Lancement
 
