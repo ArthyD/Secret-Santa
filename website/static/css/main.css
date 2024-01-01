@@ -78,6 +78,17 @@ h1{
   font-family:'aileronheavy';
 }
 
+.cardnotfound{
+  border-color: red;
+  border-width: 1px;
+  border-radius: 15px;
+}
+
+.flag{
+font-weight: bolder;
+color: #EF8538;
+}
+
 .shadow-img{
   box-shadow: 5px 5px lightgrey;
 }

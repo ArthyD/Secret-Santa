@@ -2,9 +2,23 @@
 
 {% block main %}
 <main>
-    <h1 class="main-title">Ma superbe application ultra solide</h1>
+    <h1 class="main-title">Superbe application ultra solide</h1>
 <article>
-
+    <div>
+        <h2>Liste des flags</h2>
+            {% for flag in flags %}
+            <div class="cardnotfound">
+                    <p>Nom : {{flag.nom}}</p>   
+                    {% if user.est_admin %}
+                        <p>Flag Hash : {{flag.hash}}</p>   
+                    {% endif %}
+                    {% if flag.id == 1 %}
+                        <p>Flag Hash (celui là il est cadeau) : <span class="flag">{{flag.hash}}</span></p>   
+                    {% endif %}
+            </div>
+            <p class="space"></p>
+            {% endfor %}
+    </div>
 
 </article>
 </main>
