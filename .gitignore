@@ -2,3 +2,4 @@ venv/
 flag*
 __pycache__
 bypass.py
+instance/

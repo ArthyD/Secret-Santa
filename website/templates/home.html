@@ -4,7 +4,9 @@
 <main>
     <h1 class="main-title">Superbe application ultra solide</h1>
 <article>
+    {% if not all %}
     <div>
+        
         <h2>Vérification de flag</h2>
         <div class="row">
             <form method="POST" class="col s12">
@@ -38,11 +40,21 @@
                             <p class="flag">{{flag.clear}}</p> 
                     {% endif %}
 
+                    {% if flag.found %}
+                        Statut : trouvé ...
+                    {% else %}
+                        Statut : ahah mon application est impénétrable !
+                    {% endif %}
+
                     
             </div>
             <p class="space"></p>
             {% endfor %}
     </div>
+    {% else %}
+        <h2 class="flag">Bien joué t'as tout cassé.</h2>
+        <h3>C'était pas si solide que ça...</h3>
+    {% endif %}
 
 </article>
 
