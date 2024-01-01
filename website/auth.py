@@ -75,6 +75,6 @@ def init_flags(user):
     db.session.add(flag1)
     flag2 = Flag(nom="!--", hash = generate_password_hash(flaglist[2].split('\n')[0]), clear ="cherches", found=False, id_user=user.id, local_id=3)
     db.session.add(flag2)
-    flag3 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[3]), clear ="cherches", found=False, id_user=user.id, local_id=5)
+    flag3 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[3]), clear ="cherches", found=False, id_user=user.id, local_id=4)
     db.session.add(flag3)
     db.session.commit()
