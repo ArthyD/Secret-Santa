@@ -1,2 +1,3 @@
 venv/
 flag*
+__pycache__

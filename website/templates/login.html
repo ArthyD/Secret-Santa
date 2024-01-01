@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main>
+    <h1 class="main-title">Se connecter à l'appli</h1>
+<article>
+<div class="row">
+    <form method="POST" class="col s12">
+        <div class="input-field col s12">
+            <label for="nom">Login :</label>
+            <input
+                type="text"
+                class="form-control"
+                id="nom"
+                name="nom"
+                placeholder="(name)"
+            />
+        </div>
+        <p class="space"></p>
+        <div class="input-field col s12">
+            <label for="password">Password :</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="(password)"
+            />
+        </div>
+
+        <button type="submit"
+                class="btn btn-primary connect-button">
+            Connect
+        </button>
+    </form>
+</div>
+
+</article>
+</main>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block main %}
+<main>
+    <article>
+    <form method="POST">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input
+                type="text"
+                class="form-control"
+                id="nom"
+                name="nom"
+                placeholder="Nom"
+            />
+        </div>
+        <p class="space"></p>
+        <div class="form-group">
+            <label for="password1">Mot de passe</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password1"
+                name="password1"
+                placeholder="Mot de passe"
+            />
+
+        </div>
+        <p class="space"></p>
+        <div class="form-group">
+            <label for="password2">Confirmer mot de passe</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password2"
+                name="password2"
+                placeholder="Confirmer mot de passe"
+            />
+        </div>
+        <br />
+        <button type = "submit" class = "btn btn-primary">Submit</button>
+    </form>
+</article>
+</main>
+{% endblock %}
