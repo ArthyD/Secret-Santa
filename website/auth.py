@@ -38,6 +38,7 @@ def sign_up():
         nom = request.form.get('nom')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
+        ## FLAG{Les commentaires c'est super}
         isadmin = request.form.get('admin') or "False"
 
         user = User.query.filter_by(nom=nom).first()
@@ -71,9 +72,9 @@ def init_flags(user):
     print(flaglist)
     flag0 = Flag(nom="Echauffement", hash = generate_password_hash(flaglist[0].split('\n')[0]), clear = flaglist[0], found=False, id_user=user.id, local_id = 1)
     db.session.add(flag0)
-    flag1 = Flag(nom="Qui est admin ici ?", hash = generate_password_hash(flaglist[1].split('\n')[0]), clear = flaglist[1], found=False, id_user=user.id, local_id=2)
+    flag1 = Flag(nom="##", hash = generate_password_hash(flaglist[2].split('\n')[0]), clear ="cherches", found=False, id_user=user.id, local_id=2)
     db.session.add(flag1)
-    flag2 = Flag(nom="!--", hash = generate_password_hash(flaglist[2].split('\n')[0]), clear ="cherches", found=False, id_user=user.id, local_id=3)
+    flag2 = Flag(nom="Qui est admin ici ?", hash = generate_password_hash(flaglist[1].split('\n')[0]), clear = flaglist[1], found=False, id_user=user.id, local_id=3)
     db.session.add(flag2)
     flag3 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[3]), clear ="cherches", found=False, id_user=user.id, local_id=4)
     db.session.add(flag3)
