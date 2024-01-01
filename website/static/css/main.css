@@ -3,8 +3,8 @@ html {
     min-height: 100%;
   }
   body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-  }
+    margin-bottom: 80px; /* Margin bottom by footer height */
+  }Ò
 
 .footer {
     position: absolute;
@@ -12,7 +12,7 @@ html {
     width: 100%;
     height: 60px; /* Set the fixed height of the footer here */
     line-height: 60px; /* Vertically center the text there */
-  }
+}
 
   @font-face {
     font-family: 'aileronheavy';

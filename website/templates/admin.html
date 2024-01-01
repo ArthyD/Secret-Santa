@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main>
+    <h1 class="main-title">Superbe application ultra solide, page des admins</h1>
+<article>
+    <div>
+        <p>Messages aux admins : j'ai oublié le PIN pour debugger, ... oups.</p>
+        <p>Mais voici quelques informations qui peuvent être utile :</p>
+        <ul>
+        {% for info in infos %}
+            <li>{{info}}</li>
+        {% endfor %}
+        </ul>
+        <p>Si besoin de plus d'informations, ne pas hésiter à me contacter.</p>
+    </div>
+</article>
+
+</main> 
+{% endblock %}

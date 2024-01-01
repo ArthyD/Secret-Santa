@@ -78,6 +78,8 @@ def init_flags(user):
     db.session.add(flag2)
     flag3 = Flag(nom="git add --all && git commit -m '' && git push && git oops", hash = generate_password_hash(flaglist[3]), found=False, id_user=user.id)
     db.session.add(flag3)
+    flag4 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[4]), found=False, id_user=user.id)
+    db.session.add(flag4)
 
     
     db.session.commit()
