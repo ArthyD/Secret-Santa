@@ -6,7 +6,6 @@ from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 auth = Blueprint('auth', __name__)
-hash_method = 'sha256'
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -76,10 +75,6 @@ def init_flags(user):
     db.session.add(flag1)
     flag2 = Flag(nom="!--", hash = generate_password_hash(flaglist[2].split('\n')[0]), clear ="cherches", found=False, id_user=user.id, local_id=3)
     db.session.add(flag2)
-    flag3 = Flag(nom="git add --all && git commit -m '' && git push && git oops", hash = generate_password_hash(flaglist[3].split('\n')[0]), clear ="cherches", found=False, id_user=user.id, local_id=4)
+    flag3 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[3]), clear ="cherches", found=False, id_user=user.id, local_id=5)
     db.session.add(flag3)
-    flag4 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[4]), clear ="cherches", found=False, id_user=user.id, local_id=5)
-    db.session.add(flag4)
-
-    
     db.session.commit()
