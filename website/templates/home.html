@@ -5,17 +5,37 @@
     <h1 class="main-title">Superbe application ultra solide</h1>
 <article>
     <div>
+        <h2>Vérification de flag</h2>
+        <div class="row">
+            <form method="POST" class="col s12">
+                <div class="input-field col s12">
+                    <label for="nom">Flag :</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="flag"
+                        name="flag"
+                        placeholder="(flag)"
+                    />
+                </div>
+                <button type="submit"
+                class="btn btn-primary connect-button">
+                Vérifier
+                </button>
+    </form>
+
         <h2>Liste des flags</h2>
             {% for flag in flags %}
             <div class="cardnotfound">
+                    <p>Numéro : {{flag.local_id}}</p>
                     <p>Nom : {{flag.nom}}</p>   
 
-                    {% if flag.id == 1 %}
-                        <p>Flag Hash (celui là il est cadeau) : <span class="flag">{{flag.hash}}</span></p>   
+                    {% if flag.local_id == 1 %}
+                        <p>Flag (celui là il est cadeau) : <span class="flag">{{flag.clear}}</span></p>   
 
                     {% elif user.est_admin %}
-                            <p>Flag hash : </p>  
-                            <p class="flag">{{flag.hash}}</p> 
+                            <p>Flag : </p>  
+                            <p class="flag">{{flag.clear}}</p> 
                     {% endif %}
 
                     

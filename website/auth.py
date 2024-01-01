@@ -70,15 +70,15 @@ def init_flags(user):
     with open(os.path.abspath(os.path.dirname(__file__))+'/static/flags','r') as f:
         flaglist=f.readlines()
     print(flaglist)
-    flag0 = Flag(nom="Echauffement", hash = flaglist[0], found=False, id_user=user.id)
+    flag0 = Flag(nom="Echauffement", hash = generate_password_hash(flaglist[0].split('\n')[0]), clear = flaglist[0], found=False, id_user=user.id, local_id = 1)
     db.session.add(flag0)
-    flag1 = Flag(nom="L'admin a perdu son chat", hash = flaglist[1], found=False, id_user=user.id)
+    flag1 = Flag(nom="Qui est admin ici ?", hash = generate_password_hash(flaglist[1].split('\n')[0]), clear = flaglist[1], found=False, id_user=user.id, local_id=2)
     db.session.add(flag1)
-    flag2 = Flag(nom="!--", hash = generate_password_hash(flaglist[2]), found=False, id_user=user.id)
+    flag2 = Flag(nom="!--", hash = generate_password_hash(flaglist[2].split('\n')[0]), clear ="cherches", found=False, id_user=user.id, local_id=3)
     db.session.add(flag2)
-    flag3 = Flag(nom="git add --all && git commit -m '' && git push && git oops", hash = generate_password_hash(flaglist[3]), found=False, id_user=user.id)
+    flag3 = Flag(nom="git add --all && git commit -m '' && git push && git oops", hash = generate_password_hash(flaglist[3].split('\n')[0]), clear ="cherches", found=False, id_user=user.id, local_id=4)
     db.session.add(flag3)
-    flag4 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[4]), found=False, id_user=user.id)
+    flag4 = Flag(nom="Le vrai défi", hash = generate_password_hash(flaglist[4]), clear ="cherches", found=False, id_user=user.id, local_id=5)
     db.session.add(flag4)
 
     
